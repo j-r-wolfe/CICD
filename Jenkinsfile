@@ -5,13 +5,13 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building application ...'
-                sh 'gcc c -o main.exe main.c'
+                bat 'gcc c -o main.exe main.c'
             }
         }
         stage("execute") {
             steps {
                 echo 'executing application ...'
-                sh 'main.exe'
+                bat 'main.exe'
             }
         }
     }
