@@ -5,7 +5,8 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building application ...'
-                bat 'git clone https://github.com/j-r-wolfe/CICD.git' 
+                bat 'git clone https://github.com/j-r-wolfe/CICD.git'
+                bat 'cd CICD' 
                 bat 'gcc -c -o main.exe main.c'
             }
         }
