@@ -5,7 +5,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building application ...'
-                bat 'gcc c -o main.exe main.c'
+                bat 'gcc -c -o main.exe main.c'
             }
         }
         stage("execute") {
