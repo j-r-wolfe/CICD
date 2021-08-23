@@ -2,9 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage("deploy") {
+        stage("build") {
             steps {
-                echo 'deploying application ...'
+                echo 'building application ...'
+                sh 'gcc c -o main.exe main.c'
+            }
+        }
+        stage("execute") {
+            steps {
+                echo 'executing application ...'
+                sh 'main.exe'
             }
         }
     }
